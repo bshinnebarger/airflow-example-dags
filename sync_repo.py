@@ -32,7 +32,7 @@ task_config = {
 
 sync_repo_task = BashOperator(
     task_id = 'synchronize_repo',
-    bash_command = 'echo "source /sync_repo.sh; sync_repo;',
+    bash_command = 'source /sync_repo.sh; sync_repo;',
     dag=dag
 )
 
