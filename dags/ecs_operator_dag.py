@@ -25,8 +25,8 @@ def get_ecs_operator_args(task_definition_name, task_container_name, entry_file,
         launch_type="FARGATE",
         # The name of your task as defined in ECS
         task_definition=task_definition_name,
-        aws_conn_id = 'aws_default',
-        region_name = os.environ['AWS_DEFAULT_REGION'],
+        # aws_conn_id = 'aws_default',
+        # region_name = os.environ['AWS_DEFAULT_REGION'],
         platform_version="1.4.0",
         # The name of your ECS cluster
         cluster=os.environ['CLUSTER'],
@@ -45,8 +45,8 @@ def get_ecs_operator_args(task_definition_name, task_container_name, entry_file,
                 }
             ]
         },
-        awslogs_group="FairflowExternalTaskLogs-FairflowStack",
-        awslogs_stream_prefix="FairflowExternalTask/"+task_container_name
+        # awslogs_group="FairflowExternalTaskLogs-FairflowStack",
+        # awslogs_stream_prefix="FairflowExternalTask/"+task_container_name
     )
 
 odd_task_config = {
