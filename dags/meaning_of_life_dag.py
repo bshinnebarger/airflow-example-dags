@@ -7,7 +7,7 @@ from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
 from src.whats_it_all_about import meaning_of_life
 
-DAG_NAME = 'WhatsItAboutDag'
+DAG_NAME = 'MeaningOfLifeDag'
 
 default_args = {
     'owner': 'Brett',
