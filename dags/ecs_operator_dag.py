@@ -26,6 +26,7 @@ def get_ecs_operator_args(task_definition_name, task_container_name, entry_file,
         # The name of your task as defined in ECS
         task_definition=task_definition_name,
         aws_conn_id = 'aws_default',
+        region_name = os.environ['AWS_DEFAULT_REGION'],
         platform_version="1.4.0",
         # The name of your ECS cluster
         cluster=os.environ['CLUSTER'],
