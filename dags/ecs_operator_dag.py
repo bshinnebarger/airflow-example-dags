@@ -44,24 +44,24 @@ def get_ecs_operator_args(task_definition_name, task_container_name, entry_file,
                 }
             ]
         },
-        awslogs_group="FairflowExternalTaskLogs",
+        awslogs_group="FairflowExternalTaskLogs-FairflowStack",
         awslogs_stream_prefix="FairflowExternalTask/"+task_container_name
     )
 
 odd_task_config = {
-  'task_definition_name': 'BigGuys',
+  'task_definition_name': 'BigGuys-FairflowStack',
   'task_container_name': 'BigTaskContainer',
   'entry_file': 'odd_numbers.py',
   'param': '10'
 }
 even_task_config = {
-  'task_definition_name': 'BigGuys',
+  'task_definition_name': 'BigGuys-FairflowStack',
   'task_container_name': 'BigTaskContainer',
   'entry_file': 'even_numbers.py',
   'param': '10'
 }
 numbers_task_config = {
-  'task_definition_name': 'LittleGuys',
+  'task_definition_name': 'LittleGuys-FairflowStack',
   'task_container_name': 'LittleTaskContainer',
   'entry_file': 'numbers.py',
   'param': '10'
